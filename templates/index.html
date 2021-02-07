@@ -1,0 +1,155 @@
+{% extends "layout.html" %} {% block body %}
+<!-- Portfolio Grid Items-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="/assets/images/avatar" alt="" />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Machin Learning</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">Carlos Andrade - Alexander Coba - Stefany Sanchez - Stalin Vega</p>
+    </div>
+</header>
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">IRIS</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+</section>
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="row justify-content-center">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-12 col-lg-12 mb-12">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <center>
+                    <img
+                        src="https://i.pinimg.com/600x315/fb/0e/ba/fb0ebaacd6cf81ea5fe8dc9d3d8aff17.jpg"
+                        height="100 px" alt="iris">
+                </center>
+
+                <h5 class="card-title">Iris</h5>
+                <p class="card-text">Este conjunto de datos contiene 50 muestras de cada una de tres especies de Iris:
+                    Iris setosa, Iris virginica e Iris versicolor, para cada una de estas especies se midieron cuatro
+                    rasgos de cada muestra: la longitud y el ancho del
+                    sépalos y pétalos.</p>
+                <center><button type="button" class="btn btn-primary" id="iris">Empezar</button></center>
+
+                <br>
+                <div id="formulario_iris" style="display: none;">
+                    <form action="/Iris" method="POST" style="text-align: center;">
+                        <div class="form-group">
+                            <input type="number" name="sepal_length" placeholder="sepal length (cm)" min="0" step="0.1"
+                                required>
+                            <input type="number" name="sepal_width" placeholder="sepal width (cm)" min="0" step="0.1"
+                                required>
+                            <input type="number" name="petal_length" placeholder="petal length (cm)" min="0" step="0.1"
+                                required>
+                            <input type="number" name="petal_width" placeholder="petal width (cm)" min="0" step="0.1"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Clasificar</button>
+                        </div>
+                    </form>
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Item 2-->
+<div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Abalone</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+
+<section class="page-section bg-primary text-white mb-0" id="contact">
+    <div class="row justify-content-center">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-12 col-lg-12 mb-12">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <center> <img
+                            src="https://www.wipo.int/export/sites/www/ipadvantage/images/article_0010_6_845.jpg"
+                            height="150 px" alt="Celular">
+                       </center>
+
+                        <h5 class="card-title">supervivencia de Haberman</h5>
+                        <p class="card-text">El conjunto de datos contiene casos de un estudio que se realizó entre 1958 y 1970 en el Hospital Billings de la Universidad de Chicago sobre la supervivencia
+                            de pacientes que se habían sometido a una cirugía por cáncer de mama..
+                        </p>
+                </div>
+                <center> <button type="button" class="btn btn-primary" id="celulares">Empezar</button> </center>
+                <div id="formulario_celular" style="display: none;">
+                    <form action="/haberman" method="POST">
+                        <div class="form-group col-md-4">
+                <label for="formGroupExampleInput">Age</label>
+                <input type="number" name="nucleos" class="form-control" min="0" required placeholder="Ejemplo: 4">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Operation Year</label>
+                <input type="number" name="reloj" class="form-control" min="0" required placeholder="Ejemplo: 2">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="formGroupExampleInput">Possitive Nodes</label>
+                <input type="number" name="ram" class="form-control" min="0" required placeholder="Ejemplo: 8">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Survival</label>
+                <input type="number" name="rom" class="form-control" min="0" required placeholder="Ejemplo: 64">
+            </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Clasificar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+{% endblock %}

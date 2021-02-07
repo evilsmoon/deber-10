@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block body %}
+
+<div>
+    <p>
+        </br>
+    </p>
+</div>
+
+<br>
+<h3 style="text-align: center;">Resultados</h3>
+
+<table align="center" class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo K-nearest neighbors</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyKNN }}</th>
+            <th>Survival : </th>
+            <th>{{ resultadoknn[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo Random Forest</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyRF }}</th>
+            <th>Survival: </th>
+            <th>{{ resultadoRF[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo Naive Bayes</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyNB }}</th>
+            <th>Survival: </th>
+            <th>{{ resultadoNB[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo Regresión Logística</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyRL }}</th>
+            <th>Survival: </th>
+            <th>{{ resultadoRL[0] }}</th>
+        </tr>
+    </thead>
+</table>
+
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Maquina de Soporte Vectorial (SVM)</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracySVM }}</th>
+            <th>Survival: </th>
+            <th>{{ resultadoSVM[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<br>
+<form action="/">
+    <button type="submit" class="btn btn-success">Nueva consulta</button>
+</form>
+<br>
+
+{% endblock %}

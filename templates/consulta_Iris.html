@@ -1,0 +1,99 @@
+{% extends "layout.html" %} {% block body %}
+<div>
+    <p>
+        </br>
+    </p>
+</div>
+
+<table class="table table-striped table-hover table-bordered table-sm bg-white" style="text-align: center;">
+    <thead>
+        <tr style="align-items: center;">
+            <th>sepal length (cm)</th>
+            <th>sepal width (cm)</th>
+            <th>petal length (cm)</th>
+            <th>petal width (cm)</th>
+        </tr>
+        <tr style="align-items: center;">
+            <th>{{ sepal_length }}</th>
+            <th>{{ sepal_width }}</th>
+            <th>{{ petal_length }}</th>
+            <th>{{ petal_width }}</th>
+
+        </tr>
+    </thead>
+</table>
+<h3 style="text-align: center;">Resultados</h3>
+
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo K-nearest neighbors</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyKNN }}</th>
+            <th>Especie: </th>
+            <th>{{ resultadoknn[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo Random Forest</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyRF }}</th>
+            <th>Especie: </th>
+            <th>{{ resultadoRF[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo Naive Bayes</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyNB }}</th>
+            <th>Especie: </th>
+            <th>{{ resultadoNB[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Algoritmo Regresión Logística</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracyRL }}</th>
+            <th>Especie: </th>
+            <th>{{ resultadoRL[0] }}</th>
+        </tr>
+    </thead>
+</table>
+
+<table class="table table-striped table-hover table-bordered table-sm bg-white">
+    <thead>
+        <tr style="align-items: center;">
+            <th colspan="4" style="text-align: center;">Maquina de Soporte Vectorial (SVM)</th>
+        </tr>
+        <tr>
+            <th>Accuracy: </th>
+            <th>{{ accuracySVM }}</th>
+            <th>Especie: </th>
+            <th>{{ resultadoSVM[0] }}</th>
+        </tr>
+    </thead>
+</table>
+<br>
+<form action="/">
+    <button type="submit" class="btn btn-success">Nueva consulta</button>
+</form>
+<br>
+
+{% endblock %}
